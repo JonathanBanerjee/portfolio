@@ -1,4 +1,5 @@
-import "./App.css";
+import "@picocss/pico";
+import "./css/styles.css";
 import { Home } from "./components/Home";
 import { Contact } from "./components/Contact";
 import { Blog } from "./components/Blog";
@@ -7,27 +8,23 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 function AppRouter() {
   return (
     <>
-      {/* <div className="App">
-        <div className="navbar">
-          <ul>
-            <li>Home</li>
-            <li>Blog</li>
-          </ul>
-        </div>
-        <Blog />
-      </div> */}
-
       <Router>
         <div>
-          <nav>
+          <nav className="navbar">
             <li>
-              <Link to="/"> Home</Link>
+              <Link to="/" className="listitem">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/contact"> Contact</Link>
+              <Link to="/contact" className="listitem">
+                Contact
+              </Link>
             </li>
             <li>
-              <Link to="/blog"> Blog</Link>
+              <Link to="/blog" className="listitem">
+                Blog
+              </Link>
             </li>
           </nav>
         </div>

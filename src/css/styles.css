@@ -1,0 +1,25 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.listitem {
+  display: flex;
+  justify-content: flex-end;
+  background: none;
+  color: #f9bc60;
+  border: 2px solid;
+  padding: 1em 2em;
+  font-size: 1em;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.listitem:hover {
+  border-color: #ff8906;
+  color: white;
+  background-color: #ff8906;
+  box-shadow: 0 0.5em 0.5em -0.4em #ff8906;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
