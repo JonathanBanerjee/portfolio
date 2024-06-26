@@ -1,12 +1,10 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .listitem {
-  display: flex;
-  justify-content: flex-end;
+  text-decoration: none;
   background: none;
   color: #f9bc60;
   border: 2px solid;

@@ -3,6 +3,8 @@ import "./css/styles.css";
 import { Home } from "./components/Home";
 import { Contact } from "./components/Contact";
 import { Blog } from "./components/Blog";
+import { Portfolio } from "./components/Portfolio";
+import { About } from "./components/About";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function AppRouter() {
@@ -12,17 +14,31 @@ function AppRouter() {
         <div>
           <nav className="navbar">
             <li>
-              <Link to="/" className="listitem">
+              <strong>Jonathan Banerjee</strong>
+            </li>
+
+            <li>
+              <Link to="/" className="listitem ">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="listitem">
+              <Link to="/portfolio" className="listitem ">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="listitem ">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="listitem ">
                 Contact
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="listitem">
+              <Link to="/blog" className="listitem ">
                 Blog
               </Link>
             </li>
@@ -30,8 +46,10 @@ function AppRouter() {
         </div>
         <Routes>
           <Route path="/" Component={Home} />
-          <Route path="/blog" Component={Blog} />
+          <Route path="/portfolio" Component={Portfolio} />
+          <Route path="/about" Component={About} />
           <Route path="/contact" Component={Contact} />
+          <Route path="/blog" Component={Blog} />
         </Routes>
       </Router>
     </>

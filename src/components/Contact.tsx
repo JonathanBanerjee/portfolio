@@ -1,9 +1,5 @@
+import "../css/styles.css";
+
 export function Contact() {
-  return (
-    <div className="container">
-      <div className="home">
-        <h1>This is my contact page.</h1>
-      </div>
-    </div>
-  );
+  return <h1>This is my contact page.</h1>;
 }

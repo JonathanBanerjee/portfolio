@@ -1,3 +1,5 @@
+import "../css/styles.css";
+
 import blogData from "../../blog.json";
 type Blog = {
   id: number;

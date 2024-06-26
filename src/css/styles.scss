@@ -1,19 +1,15 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+$button-dark: #f9bc60;
+$hoverbutton-dark: #ff8906;
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
 }
-// .navbar {
-//   background-color: rgb(50, 47, 47);
-//   color: white;
-//   padding: 10px;
-// }list-style: none;
 
 .listitem {
-  display: flex;
-  justify-content: flex-end;
+  text-decoration: none;
   background: none;
-  color: #f9bc60;
+  color: $button-dark;
   border: 2px solid;
   padding: 1em 2em;
   font-size: 1em;
@@ -21,44 +17,10 @@
 }
 
 .listitem:hover {
-  border-color: #ff8906;
+  border-color: $hoverbutton-dark;
   color: white;
-  background-color: #ff8906;
-  box-shadow: 0 0.5em 0.5em -0.4em #ff8906;
+  background-color: $hoverbutton-dark;
+  box-shadow: 0 0.5em 0.5em -0.4em $hoverbutton-dark;
   transform: translateY(-0.25em);
   cursor: pointer;
 }
-
-// .App {
-//   background: rgb(44, 183, 134);
-//   height: 100vh;
-// }
-// .container {
-//   width: 600px;
-//   margin: 0px auto;
-// }
-// .container .blog {
-//   display: flex;
-//   padding: 10px;
-// }
-// .container .card {
-//   background-color: white;
-//   margin: 10px;
-//   padding: 10px;
-//   border-radius: 4px;
-//   width: 50%;
-//   font-size: 10px;
-//   color: rgb(50, 47, 47);
-// }
-// .container .card img {
-//   width: 100%;
-// }
-
-// #onebody {
-//   font-family: "Roboto", sans-serif;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 100vh;
-//   background-color: #151b29;
-// }
