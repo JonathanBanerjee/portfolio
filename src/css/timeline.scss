@@ -1,0 +1,48 @@
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin: 20px 0 40px;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.right-content,
+.left-content {
+  color: #b17304;
+  float: left;
+  display: block;
+  width: 50%;
+  padding: 1% 2%;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+.left-content {
+  border-right: 5px dotted #ff8906;
+  text-align: right;
+}
+.left-content p {
+  margin: 150px 0 0;
+  color: white;
+}
+.right-content p {
+  margin: 150px 0 0;
+  color: white;
+}
+.container p {
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7 ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.left-content .more-padding {
+  padding-right: 100px;
+}
+.right-content .more-padding {
+  padding-left: 100px;
+}
