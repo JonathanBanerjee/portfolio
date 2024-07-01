@@ -24,7 +24,7 @@ function AppRouter() {
 
         <Router>
           <div>
-            {/* <nav className="navbar">
+            <nav className="navbar">
               <li>
                 <strong>Jonathan Banerjee</strong>
               </li>
@@ -54,30 +54,6 @@ function AppRouter() {
                   Blog
                 </Link>
               </li>
-            </nav> */}
-            <nav>
-              <ul>
-                <li>
-                  <strong>Acme Corp</strong>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="#" className="contrast">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="contrast">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="contrast">
-                    Products
-                  </a>
-                </li>
-              </ul>
             </nav>
           </div>
 
