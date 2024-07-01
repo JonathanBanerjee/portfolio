@@ -1,3 +1,13 @@
+.Dark {
+  background-color: #13171f;
+  min-height: 100vh;
+  color: white;
+}
+.Dark h1,
+.Dark h2,
+.Dark h4 {
+  color: white;
+}
 .Dark .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -23,6 +33,12 @@
 .Light {
   background-color: rgb(0, 70, 67);
   min-height: 100vh;
+  color: white;
+}
+.Light h1,
+.Light h2,
+.Light h4 {
+  color: white;
 }
 .Light .navbar {
   display: flex;

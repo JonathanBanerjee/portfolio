@@ -11,13 +11,24 @@ export function LightDarkButton({ onClick, mode, ...rest }: ButtonProps) {
           ? {
               backgroundColor: "#212121",
               borderColor: "white",
-              borderRadius: "20%",
+              //   borderRadius: "20%",
+              textDecoration: "none",
+              background: "none",
+              border: "2px solid",
+              padding: "1em 2em",
+              fontSize: "1em",
+              margin: "0.75%",
             }
           : {
               backgroundColor: "white",
               color: "black",
               borderColor: "black",
-              borderRadius: "20%",
+              textDecoration: "none",
+              background: "none",
+              border: "2px solid",
+              padding: "1em 2em",
+              fontSize: "1em",
+              margin: "0.75%",
             }
       }
       onClick={onClick}
