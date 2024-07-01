@@ -8,8 +8,17 @@ export function LightDarkButton({ onClick, mode, ...rest }: ButtonProps) {
     <button
       style={
         mode === "Dark"
-          ? { backgroundColor: "blue" }
-          : { backgroundColor: "#F64740" }
+          ? {
+              backgroundColor: "#212121",
+              borderColor: "white",
+              borderRadius: "20%",
+            }
+          : {
+              backgroundColor: "white",
+              color: "black",
+              borderColor: "black",
+              borderRadius: "20%",
+            }
       }
       onClick={onClick}
       {...rest}

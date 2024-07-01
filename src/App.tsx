@@ -20,8 +20,6 @@ function AppRouter() {
   return (
     <>
       <div id="main" className={mode}>
-        <LightDarkButton onClick={switchMode} mode={mode} />
-
         <Router>
           <div>
             <nav className="navbar">
@@ -54,6 +52,7 @@ function AppRouter() {
                   Blog
                 </Link>
               </li>
+              <LightDarkButton onClick={switchMode} mode={mode} />
             </nav>
           </div>
 
