@@ -1,64 +1,61 @@
-@media only screen and (prefers-color-scheme: dark) {
-  $button-dark: #f9bc60;
-  $hoverbutton-dark: #ff8906;
-  $button-light: #f9bc60;
-  $hoverbutton-light: #ff8906;
+$button-dark: #f9bc60;
+$hoverbutton-dark: #ff8906;
+$button-light: #f9bc60;
+$hoverbutton-light: #ff8906;
 
-  .Dark {
-    .navbar {
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    .listitem {
-      text-decoration: none;
-      background: none;
-      color: $button-dark;
-      border: 2px solid;
-      padding: 1em 2em;
-      font-size: 1em;
-      transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,
-        transform 0.25s;
-    }
-
-    .listitem:hover {
-      border-color: $hoverbutton-dark;
-      color: white;
-      background-color: $hoverbutton-dark;
-      box-shadow: 0 0.5em 0.5em -0.4em $hoverbutton-dark;
-      transform: translateY(-0.25em);
-      cursor: pointer;
-    }
+.Dark {
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
   }
 
-  .Light {
-    * {
-      background-color: rgb(0, 70, 67);
-    }
+  .listitem {
+    text-decoration: none;
+    background: none;
+    color: $button-dark;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,
+      transform 0.25s;
+  }
 
-    .navbar {
-      display: flex;
-      justify-content: space-evenly;
-    }
+  .listitem:hover {
+    border-color: $hoverbutton-dark;
+    color: white;
+    background-color: $hoverbutton-dark;
+    box-shadow: 0 0.5em 0.5em -0.4em $hoverbutton-dark;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+  }
+}
 
-    .listitem {
-      text-decoration: none;
-      background: none;
-      color: $button-light;
-      border: 2px solid;
-      padding: 1em 2em;
-      font-size: 1em;
-      transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,
-        transform 0.25s;
-    }
+.Light {
+  background-color: rgb(0, 70, 67);
+  min-height: 100vh;
 
-    .listitem:hover {
-      border-color: $hoverbutton-light;
-      color: white;
-      background-color: $hoverbutton-light;
-      box-shadow: 0 0.5em 0.5em -0.4em $hoverbutton-light;
-      transform: translateY(-0.25em);
-      cursor: pointer;
-    }
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .listitem {
+    text-decoration: none;
+    background: none;
+    color: $button-light;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,
+      transform 0.25s;
+  }
+
+  .listitem:hover {
+    border-color: $hoverbutton-light;
+    color: white;
+    background-color: $hoverbutton-light;
+    box-shadow: 0 0.5em 0.5em -0.4em $hoverbutton-light;
+    transform: translateY(-0.25em);
+    cursor: pointer;
   }
 }
