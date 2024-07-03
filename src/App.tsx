@@ -1,10 +1,12 @@
 import "@picocss/pico";
-import "./css/styles.css";
+// import "./css/styles.css";
+import "./css/output.css";
 import { Home } from "./components/Home";
 import { Contact } from "./components/Contact";
 import { Blog } from "./components/Blog";
 import { Portfolio } from "./components/Portfolio";
 import { About } from "./components/About";
+import Example from "./components/StackedList";
 // import { Button } from "./components/Button";
 import { LightDarkButton } from "./components/LightDarkButton";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
@@ -52,6 +54,11 @@ function AppRouter() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link to="/stacked" className="listitem ">
+                  StackedList
+                </Link>
+              </li>
               <LightDarkButton onClick={switchMode} mode={mode} />
             </nav>
           </div>
@@ -62,6 +69,7 @@ function AppRouter() {
             <Route path="/about" Component={About} />
             <Route path="/contact" Component={Contact} />
             <Route path="/blog" Component={Blog} />
+            <Route path="/stacked" Component={Example} />
           </Routes>
         </Router>
       </div>
