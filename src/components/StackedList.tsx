@@ -23,15 +23,15 @@ export default function Example() {
   return (
     <ul className="divide-y divide-gray-200">
       {people.map((person) => (
-        <li key={person.email} className="py-4 flex">
+        <li key={person.email} className="py-4 flex contactitem">
           <img
             className="w-24 h-24 rounded-full mx-auto"
             src={person.image}
             alt=""
           />
           <div className="ml-3">
-            <p className="text-sm font-medium text-gray-900">{person.name}</p>
-            <p className="text-sm text-gray-500">{person.email}</p>
+            <p className="text-sm font-medium text-orange-200">{person.name}</p>
+            <p className="text-sm text-orange-200">{person.email}</p>
           </div>
         </li>
       ))}

@@ -41,6 +41,12 @@ $hoverbutton-light: #ff8906;
     transform: translateY(-0.25em);
     cursor: pointer;
   }
+  .contactitem {
+    div {
+      min-width: 300px;
+      text-align: center;
+    }
+  }
 }
 
 .Light {
@@ -76,5 +82,11 @@ $hoverbutton-light: #ff8906;
     box-shadow: 0 0.5em 0.5em -0.4em $hoverbutton-light;
     transform: translateY(-0.25em);
     cursor: pointer;
+  }
+  .contactitem {
+    div {
+      min-width: 300px;
+      text-align: center;
+    }
   }
 }
