@@ -6,6 +6,7 @@ import { Contact } from "./components/Contact";
 import { Blog } from "./components/Blog";
 import { Portfolio } from "./components/Portfolio";
 import { About } from "./components/About";
+import { Hamburger } from "./components/Hamburger";
 import Example from "./components/StackedList";
 // import { Button } from "./components/Button";
 import { LightDarkButton } from "./components/LightDarkButton";
@@ -19,9 +20,14 @@ function AppRouter() {
     mode === "Light" ? setMode("Dark") : setMode("Light");
   };
 
+  const handleHamburgerClick = () => {
+    console.log("Hamburger clicked!");
+  };
+
   return (
     <>
       <div id="main" className={mode}>
+        <Hamburger onClick={handleHamburgerClick} />
         <Router>
           <div>
             <nav className="navbar">
@@ -76,4 +82,5 @@ function AppRouter() {
     </>
   );
 }
+
 export default AppRouter;
