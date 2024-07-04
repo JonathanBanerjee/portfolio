@@ -1,4 +1,4 @@
-import "@picocss/pico";
+// import "@picocss/pico";
 // import "./css/styles.css";
 import "./css/output.css";
 import { Home } from "./components/Home";

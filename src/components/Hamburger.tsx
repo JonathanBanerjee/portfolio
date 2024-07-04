@@ -23,7 +23,7 @@ export function Hamburger(props: HamburgerProps) {
     <button
       onClick={handleClick}
       type="button"
-      className={`justify-around flex-row cursor-pointer`}
+      //   className={`justify-around flex-row cursor-pointer`}
     >
       <div
         className={`my-1 bg-black block w-7 h-[0.35rem] rounded transition-all origin-[1px] ${
