@@ -13,6 +13,7 @@
 .Dark .navbar {
   display: flex;
   justify-content: space-evenly;
+  list-style-type: none;
 }
 
 .Dark .listitem {
@@ -49,6 +50,7 @@
 .Light .navbar {
   display: flex;
   justify-content: space-evenly;
+  list-style-type: none;
 }
 
 .Light .listitem {
