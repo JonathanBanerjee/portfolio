@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-//Creating the interface used to explain how objects are shaped.
+// Creating the interface used to explain how objects are shaped.
 export interface HamburgerProps {
   // Callback function which executes on click
   onClick: () => void;
@@ -9,7 +9,7 @@ export interface HamburgerProps {
   isInitiallyOpen?: boolean;
 }
 
-//Adding the component structure
+// Adding the component structure
 export function Hamburger(props: HamburgerProps) {
   const { onClick, isInitiallyOpen } = props;
   const [isOpen, setIsOpen] = useState<boolean>(isInitiallyOpen ?? false);
@@ -20,12 +20,7 @@ export function Hamburger(props: HamburgerProps) {
   };
 
   return (
-    <button
-      className="hamburger"
-      onClick={handleClick}
-      type="button"
-      //   className={`justify-around flex-row cursor-pointer`}
-    >
+    <button className="hamburger p-2" onClick={handleClick} type="button">
       <div
         className={`my-1 bg-black block w-7 h-[0.35rem] rounded transition-all origin-[1px] ${
           isOpen ? "rotate-45" : "rotate-0"
