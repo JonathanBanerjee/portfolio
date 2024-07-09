@@ -11,10 +11,6 @@
 .Dark h4 {
   color: white;
 }
-.Dark .navbar {
-  display: flex;
-  justify-content: space-evenly;
-}
 .Dark .listitem {
   text-decoration: none;
   background: none;
@@ -47,10 +43,7 @@
 .Light h4 {
   color: white;
 }
-.Light .navbar {
-  display: flex;
-  justify-content: space-evenly;
-}
+
 .Light .listitem {
   text-decoration: none;
   background: none;
@@ -71,4 +64,4 @@
 .Light .contactitem div {
   min-width: 300px;
   text-align: center;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */

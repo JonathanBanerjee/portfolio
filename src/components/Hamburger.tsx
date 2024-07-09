@@ -21,6 +21,7 @@ export function Hamburger(props: HamburgerProps) {
 
   return (
     <button
+      className="hamburger"
       onClick={handleClick}
       type="button"
       //   className={`justify-around flex-row cursor-pointer`}

@@ -14,9 +14,10 @@ export function LightDarkButton({ onClick, mode, ...rest }: ButtonProps) {
               textDecoration: "none",
               background: "none",
               border: "2px solid",
-              padding: "1em 2em",
+              padding: "1em 0",
               fontSize: "1em",
-              margin: "0.75%",
+              width: "100px",
+              // textAlign: "center",
             }
           : {
               backgroundColor: "white",
@@ -24,10 +25,11 @@ export function LightDarkButton({ onClick, mode, ...rest }: ButtonProps) {
               borderColor: "black",
               textDecoration: "none",
               background: "none white",
-              border: "2px solid black",
-              padding: "1em 2em",
+              border: "2px solid",
+              padding: "1em 0",
               fontSize: "1em",
-              margin: "0.75%",
+              width: "100px",
+              // textAlign: "center",
             }
       }
       onClick={onClick}
