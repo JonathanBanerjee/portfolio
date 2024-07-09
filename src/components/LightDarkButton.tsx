@@ -17,6 +17,7 @@ export function LightDarkButton({ onClick, mode, ...rest }: ButtonProps) {
               padding: "1em 0",
               fontSize: "1em",
               width: "100px",
+              marginTop: "10%",
               // textAlign: "center",
             }
           : {
@@ -29,6 +30,7 @@ export function LightDarkButton({ onClick, mode, ...rest }: ButtonProps) {
               padding: "1em 0",
               fontSize: "1em",
               width: "100px",
+              marginTop: "10%",
               // textAlign: "center",
             }
       }

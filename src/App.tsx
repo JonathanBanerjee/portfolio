@@ -7,7 +7,6 @@ import { Contact } from "./components/Contact";
 import { Portfolio } from "./components/Portfolio";
 import { About } from "./components/About";
 import { Hamburger } from "./components/Hamburger";
-import Example from "./components/StackedList";
 // import { Button } from "./components/Button";
 import { LightDarkButton } from "./components/LightDarkButton";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
@@ -56,12 +55,6 @@ function AppRouter() {
                     Contact
                   </Link>
                 </li>
-
-                <li>
-                  <Link to="/stacked" className="listitem ">
-                    StackedList
-                  </Link>
-                </li>
                 <li>
                   <LightDarkButton onClick={switchMode} mode={mode} />
                 </li>
@@ -74,7 +67,6 @@ function AppRouter() {
             <Route path="/portfolio" Component={Portfolio} />
             <Route path="/about" Component={About} />
             <Route path="/contact" Component={Contact} />
-            <Route path="/stacked" Component={Example} />
           </Routes>
         </Router>
       </div>
