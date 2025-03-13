@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { NavbarMenu } from "@/components/ui/navbar";
-import { Hero } from "@/components/ui/hero";
+import Image from "next/image";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +32,12 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <NavbarMenu />
-          <Hero />
+          {/* <Hero /> */}
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
+            <NavbarMenu />
+            <ModeToggle />
           </ThemeProvider>
+          {children}
         </body>
       </html>
     </>

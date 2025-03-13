@@ -11,7 +11,7 @@ export function ModeToggle() {
 
   return (
     <>
-      <div className="flex justify-end w-[98%] mt-[2%]">
+      <div className="flex justify-end w-[98%] h-[98%]">
         <Button
           variant="outline"
           size="icon"
