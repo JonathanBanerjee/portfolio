@@ -2,15 +2,17 @@ import React from "react";
 import { FlipWords } from "./flip-words";
 
 export function FlipText() {
-  const words = ["better", "cute", "beautiful", "modern"];
+  const words = ["creative", "pro-active"];
 
   return (
-    <div className="h-[40rem] flex justify-center items-center px-4">
-      <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        Build
-        <FlipWords words={words} /> <br />
-        websites with Aceternity UI
+    <>
+      <div className="h-[20rem] flex flex-col justify-center items-center px-4 text-center">
+        <p className="text-4xl font-normal text-neutral-600 dark:text-neutral-400">
+          Hi, I'm Jonathan.
+          <br /> A <FlipWords words={words} /> <br />
+          developer crafting exceptional digital experiences.
+        </p>
       </div>
-    </div>
+    </>
   );
 }

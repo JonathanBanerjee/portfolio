@@ -4,10 +4,10 @@ export function Hero() {
   return (
     <Avatar>
       <AvatarImage
-        src="LinkedInProfile.png"
-        alt="Jonathan Banerjee Profile Photo"
+        src="/LinkedInProfile.png"
+        alt="Profile photo of Jonathan Banerjee"
       />
-      <AvatarFallback>Jonathan Banerjee</AvatarFallback>
+      <AvatarFallback>JB</AvatarFallback>
     </Avatar>
   );
 }
