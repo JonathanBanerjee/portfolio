@@ -11,7 +11,7 @@ function Avatar({
   ...props
 }: React.ComponentProps<typeof AvatarPrimitive.Root>) {
   return (
-    <div className="flex justify-center  mt-[10%] ">
+    <div className="flex justify-center  mt-[13%] ">
       <AvatarPrimitive.Root
         data-slot="avatar"
         className={cn(
