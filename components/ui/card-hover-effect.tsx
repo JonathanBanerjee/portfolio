@@ -1,8 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { Badge } from "./badge";
 
 export const HoverEffect = ({
   items,
@@ -14,6 +15,7 @@ export const HoverEffect = ({
     link: string;
     githubLink?: string;
     icon?: React.ReactNode;
+    badges?: string[];
   }[];
   className?: string;
 }) => {
@@ -22,7 +24,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-4", // Added gap-4 for spacing
         className
       )}
     >
@@ -50,7 +52,12 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card link={item.link} githubLink={item.githubLink} icon={item.icon}>
+          <Card
+            link={item.link}
+            githubLink={item.githubLink}
+            icon={item.icon}
+            badges={item.badges}
+          >
             <Link href={item.link} className="block">
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
@@ -68,30 +75,48 @@ export const Card = ({
   link,
   githubLink,
   icon,
+  badges,
 }: {
   className?: string;
   children: React.ReactNode;
   link: string;
   githubLink?: string;
   icon?: React.ReactNode;
+  badges?: string[];
 }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden  bg-white dark:bg-black border border-black-500 dark:border-white/[0.2] group-hover:border-blue-400 dark:group-hover:border-orange-500 relative z-20",
+        "rounded-2xl h-full w-full p-3 overflow-hidden bg-white dark:bg-black border border-black-500 dark:border-white/[0.2] group-hover:border-blue-400 dark:group-hover:border-orange-500 relative z-20 min-h-[300px]", // Added min-h-[300px]
         className
       )}
     >
-      <div className="relative z-50">
-        <div className="p-4">{children}</div>
+      <div className="relative z-50 flex flex-col h-full">
+        <div className="p-3 flex-1">{children}</div>{" "}
+        {/* flex-1 ensures content takes available space */}
+        {badges && (
+          <div className="flex flex-wrap gap-2 p-3 justify-center items-center">
+            {badges.map((badge, idx) => (
+              <Badge key={idx} variant="secondary">
+                {badge}
+              </Badge>
+            ))}
+          </div>
+        )}
         {icon && githubLink && (
           <Link
             href={githubLink}
-            className="absolute bottom-1 right-6 text-black-400 dark:text-white hover:text-blue-400 dark:hover:text-orange-500"
+            className={cn(
+              "flex justify-center items-center mt-4",
+              "text-black-400 dark:text-white hover:text-blue-400 dark:hover:text-orange-500",
+              "transition-colors duration-200"
+            )}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {icon}
+            <span className="inline-block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+              {icon}
+            </span>
           </Link>
         )}
       </div>
@@ -109,7 +134,7 @@ export const CardTitle = ({
   return (
     <h4
       className={cn(
-        "text-blue-600 dark:text-orange-400 font-bold tracking-wide mt-4 text-lg text-center",
+        "text-blue-600 dark:text-orange-400 font-bold tracking-wide text-lg text-center", // Removed mt-4
         className
       )}
     >
@@ -128,7 +153,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 mb-8 text-black-800 dark:text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-2 text-black-800 dark:text-zinc-400 tracking-wide leading-relaxed text-sm", // Adjusted mt-8 mb-2 to mt-2
         className
       )}
     >
