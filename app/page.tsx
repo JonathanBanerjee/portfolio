@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Hero } from "@/components/ui/hero";
 import { FlipText } from "@/components/ui/fliptext";
 import { Projects } from "@/components/ui/projects";
-import Contact from "@/components/ui/email";
+import { SheetDemo } from "@/components/ui/email";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <FlipText />
       <Projects />
-      <Contact />
+      <SheetDemo />
     </>
   );
 }
