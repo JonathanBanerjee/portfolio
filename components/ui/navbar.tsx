@@ -35,6 +35,7 @@ function Navbar({ className }: { className?: string }) {
             item="Projects"
             className="bg-left-bottom bg-gradient-to-r from-orange-500 to-orange-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
           ></MenuItem>
+
           <MenuItem
             setActive={setActive}
             active={active}
