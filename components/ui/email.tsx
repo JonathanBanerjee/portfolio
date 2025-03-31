@@ -22,7 +22,7 @@ export function SheetDemo() {
               className="bg-white dark:bg-slate-950 dark:text-white text-blue-600 dark:text-slate-50 flex justify-center items-center group relative overflow-hidden border-blue-400 dark:border-orange-400 mb-10"
               variant="outline"
             >
-              <span className="group-hover:translate-x-40 group-hover:opacity-0 text-center transition-all duration-500 opacity-100">
+              <span className="group-hover:translate-x-40 group-hover:opacity-0 text-center transition-all opacity-100">
                 Get in touch
               </span>
               <div className="translate-x-[-100%] group-hover:translate-x-0 flex items-center justify-center absolute inset-0 transition-transform  text-white z-20 cursor-pointer bg-blue-400 dark:bg-orange-400">
