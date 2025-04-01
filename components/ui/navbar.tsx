@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Menu, MenuItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
+import { Link } from "react-scroll";
 
 export function NavbarMenu() {
   return (
@@ -22,26 +23,32 @@ function Navbar({ className }: { className?: string }) {
         )}
       >
         <Menu setActive={setActive}>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Home"
-            className={"bg-blue"}
-          ></MenuItem>
+          <Link to="top" smooth={true} duration={500}>
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item="Home"
+              className="bg-blue"
+            />
+          </Link>
 
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Projects"
-            className="bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 dark:from-orange-500 dark:to-orange-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-          ></MenuItem>
+          <Link to="projects" smooth={true} duration={500} offset={-50}>
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item="Projects"
+              className="bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 dark:from-orange-500 dark:to-orange-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+            ></MenuItem>
+          </Link>
 
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Contact"
-            className="bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 dark:from-orange-500 dark:to-orange-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-          ></MenuItem>
+          <Link to="contact" smooth={true} duration={500} offset={-50}>
+            <MenuItem
+              setActive={setActive}
+              active={active}
+              item="Contact"
+              className="bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 dark:from-orange-500 dark:to-orange-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+            ></MenuItem>
+          </Link>
         </Menu>
       </div>
     </>
