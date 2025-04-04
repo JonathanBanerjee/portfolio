@@ -12,6 +12,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 export function SheetDemo() {
   return (
     <>
@@ -30,9 +38,11 @@ export function SheetDemo() {
               </div>
             </Button>
           </SheetTrigger>
+
           <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Edit profile</SheetTitle>
+            {" "}
+            {/* <SheetHeader> */}
+            {/* <SheetTitle>Edit profile</SheetTitle>
               <SheetDescription>
                 Make changes to your profile here. Click save when you're done.
               </SheetDescription>
@@ -58,12 +68,92 @@ export function SheetDemo() {
                   className="col-span-3"
                 />
               </div>
-            </div>
-            <SheetFooter>
-              <SheetClose asChild>
+            </div> */}
+            {/* <SheetFooter> */}
+            {/* <SheetClose asChild>
                 <Button type="submit">Save changes</Button>
               </SheetClose>
-            </SheetFooter>
+            </SheetFooter> */}
+            <SheetTitle className="flex justify-center text-blue-600 dark:text-orange-400">
+              Contact Form
+            </SheetTitle>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              id="form"
+              className="needs-validation"
+              noValidate
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="YOUR_ACCESS_KEY_HERE"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Submission from Web3Forms"
+              />
+
+              <div className="mb-4 mt-3">
+                <label
+                  htmlFor="full_name"
+                  className="block ml-2 mb-2 text-md text-blue-600 dark:text-orange-400"
+                >
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="full_name"
+                  placeholder="John Doe"
+                  required
+                  className="w-full px-3 py-2 placeholder-gray-300 border border-blue-300 dark:border-orange-300 rounded-md focus:outline-none focus:ring focus:ring-slate-300 focus:border-slate-300"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="block ml-2 mb-2 text-md text-blue-600 dark:text-orange-400"
+                >
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="you@company.com"
+                  required
+                  className="w-full px-3 py-2 placeholder-gray-300 border border-blue-300 dark:border-orange-300 rounded-md focus:outline-none focus:ring focus:ring-slate-300 focus:border-slate-300"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="message"
+                  className="block ml-2 mb-2 text-md text-blue-600 dark:text-orange-400"
+                >
+                  Your Message
+                </label>
+
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  className="w-full h-28 px-3 py-2 placeholder-gray-300 border border-blue-300 dark:border-orange-300 rounded-md focus:outline-none focus:ring focus:ring-slate-300 focus:border-slate-300"
+                  required
+                ></textarea>
+              </div>
+              <div className="mb-3">
+                <button
+                  type="submit"
+                  className="w-full px-3 py-4 text-white bg-blue-600 dark:bg-orange-400 rounded-md focus:bg-blue-400 dark:focus:bg-orange-200 focus:outline-none"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
           </SheetContent>
         </Sheet>
       </div>
