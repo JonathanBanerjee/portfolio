@@ -2,8 +2,7 @@ import Image from "next/image";
 import { Hero } from "@/components/ui/hero";
 import { FlipText } from "@/components/ui/fliptext";
 import { Projects } from "@/components/ui/projects";
-import { SheetDemo } from "@/components/ui/email";
-
+import Contact from "@/components/ui/email";
 export default function Home() {
   return (
     <>
@@ -17,9 +16,8 @@ export default function Home() {
       <div id="projects">
         <Projects />
       </div>
-      <div id="contact">
-        <SheetDemo />
-      </div>
+      <div id="contact"></div>
+      <Contact />
     </>
   );
 }
