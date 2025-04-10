@@ -12,38 +12,20 @@ export function Projects() {
 
 export const projects = [
   {
-    title: "Airchecker",
-    description:
-      "A dynamic web application using Air Quality and Geolocation APIs. Built with React, Vite, and Pico CSS for real-time air quality monitoring.",
-    link: "https://airchecker.netlify.app",
-    githubLink: "https://github.com/JonathanBanerjee/airchecker",
+    title: "Portfolio",
+    description: "This Website. showcasing my latest and greatest projects.",
+    link: "https://placeholder.netlify.app",
+    githubLink: "https://github.com/JonathanBanerjee/portfolio",
     icon: <Github className="w-4 h-4" />,
-    badges: ["React", "Vite", "Pico CSS", "API"],
-  },
-  {
-    title: "FairWeather",
-    description: "A Weather Forecast app using the Open Weather Map API.",
-    link: "https://fairweather.netlify.app",
-    githubLink: "https://github.com/JonathanBanerjee/fairweather",
-    icon: <Github className="w-4 h-4" />,
-    badges: ["React", "API"],
-  },
-  {
-    title: "To Do App",
-    description: "A simple CRUD to do app.",
-    link: "https://todosforme.netlify.app",
-    githubLink: "https://github.com/JonathanBanerjee/todo-app",
-    icon: <Github className="w-4 h-4" />,
-    badges: ["React", "CRUD"],
-  },
-  {
-    title: "Tic Tac Toe",
-    description:
-      "A classic two-player Tic-Tac-Toe game built with React, demonstrating core React concepts and state management.",
-    link: "https://react-noughtsandcrosses.netlify.app",
-    githubLink: "https://github.com/JonathanBanerjee/tic-tac-toe",
-    icon: <Github className="w-4 h-4" />,
-    badges: ["React", "State Management"],
+    badges: [
+      "NextJS",
+      "TypeScript",
+      "AWS",
+      "Shadcn UI",
+      "Web3Forms",
+      "AceturnityUI",
+      "MagicUI",
+    ],
   },
   {
     title: "Blonde Money Website",
@@ -52,15 +34,41 @@ export const projects = [
     link: "http://blonde-money.vercel.app",
     githubLink: "https://github.com/JonathanBanerjee/blonde-money",
     icon: <Github className="w-4 h-4" />,
-    badges: ["React", "Vercel"],
+    badges: ["NextJS", "TypeScript", "Shadcn UI", "Web3Forms", "AceturnityUI"],
+  },
+  {
+    title: "Airchecker",
+    description:
+      "A dynamic web application using Air Quality and Geolocation APIs. Built with React, Vite, and Pico CSS for real-time air quality monitoring.",
+    link: "https://airchecker.netlify.app",
+    githubLink: "https://github.com/JonathanBanerjee/airchecker",
+    icon: <Github className="w-4 h-4" />,
+    badges: ["React", "Vite", "Pico CSS", "REST API"],
+  },
+  {
+    title: "FairWeather",
+    description: "A Weather Forecast app using the Open Weather Map API.",
+    link: "https://fairweather.netlify.app",
+    githubLink: "https://github.com/JonathanBanerjee/fair-weather",
+    icon: <Github className="w-4 h-4" />,
+    badges: ["Javascript", "SCSS", "HTML", "REST API"],
+  },
+  {
+    title: "To Do App",
+    description:
+      "A to do app demonstrating Create, Read, Update and Delete functionality.",
+    link: "https://todosforme.netlify.app",
+    githubLink: "https://github.com/JonathanBanerjee/todo",
+    icon: <Github className="w-4 h-4" />,
+    badges: ["JavaScript", "SCSS", "HTML"],
   },
   {
     title: "Spotify Clone",
     description:
-      "A pixel-perfect replica of the Spotify website, built using SASS and HTML5, showcasing advanced CSS techniques.",
+      "A replica of the Spotify website, built using SASS and HTML5, using advanced CSS techniques.",
     link: "https://jonathan-spotify.netlify.app",
     githubLink: "https://github.com/JonathanBanerjee/spotify-clone",
     icon: <Github className="w-4 h-4" />,
-    badges: ["SASS", "HTML5", "CSS"],
+    badges: ["SCSS", "HTML5", "CSS"],
   },
 ];
