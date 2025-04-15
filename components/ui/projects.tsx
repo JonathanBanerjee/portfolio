@@ -1,6 +1,5 @@
 import { HoverEffect } from "../ui/card-hover-effect";
 import { Github } from "lucide-react";
-import { Badge } from "./badge";
 
 export function Projects() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 
 const transition = {
@@ -29,7 +29,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)}>
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black  dark:text-white"
+        className="cursor-pointer text-black dark:text-white"
       >
         {item}
       </motion.p>
@@ -43,13 +43,10 @@ export const MenuItem = ({
             <div>
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
+                layoutId="active"
                 className="bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 dark:from-orange-500 dark:to-orange-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
               >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="w-max h-full p-[1px]"
-                >
+                <motion.div layout className="w-max h-full p-[1px]">
                   {children}
                 </motion.div>
               </motion.div>
@@ -70,8 +67,8 @@ export const Menu = ({
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="absolute rounded-full border  border-black/[0.2] dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-3 "
+      onMouseLeave={() => setActive(null)}
+      className="absolute rounded-full border border-black/[0.2] dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-3 "
     >
       {children}
     </nav>
@@ -102,7 +99,7 @@ export const ProductItem = ({
         <h4 className="text-xl font-bold mb-1 text-black dark:text-white hover:text-underline-offset-1">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300  ">
+        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
           {description}
         </p>
       </div>
@@ -110,11 +107,16 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+interface HoveredLinkProps extends LinkProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const HoveredLink = ({ children, ...rest }: HoveredLinkProps) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
     >
       {children}
     </Link>

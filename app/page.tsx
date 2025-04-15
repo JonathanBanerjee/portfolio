@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Hero } from "@/components/ui/hero";
 import { FlipText } from "@/components/ui/fliptext";
 import { Projects } from "@/components/ui/projects";
