@@ -13,7 +13,7 @@ export const projects = [
   {
     title: "Portfolio",
     description: "This Website. showcasing my latest and greatest projects.",
-    link: "https://placeholder.netlify.app",
+    link: "jonathanbanerjee.vercel.app",
     githubLink: "https://github.com/JonathanBanerjee/portfolio",
     icon: <Github className="w-4 h-4" />,
     badges: [
