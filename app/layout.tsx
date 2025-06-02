@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jnathan Banerjee",
+  title: "Jonathan Banerjee",
   description: "Jonathan Banerjee's Portfolio Site",
 };
 
